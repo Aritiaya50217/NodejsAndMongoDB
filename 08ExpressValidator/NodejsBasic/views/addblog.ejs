@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link ckeditor -->
+    <!-- link download  = https://ckeditor.com/docs/ckeditor4/latest/guide/dev_installation.html -->
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+</head>
+<body>
+    <%- include layout%>
+    <div class="container">
+        <h2 align="center">เขียนบทความ</h2>
+        <!-- หลังจากกดบันทึกจะให้ไปทำงานที่  "/blog/add" -->
+        <form class="" action="/blog/add" method="POST">
+            <div class="form-group">
+                <label for="">ชื่อบทความ</label>
+                <input type="text" name="name" value="" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">รายละเอียด</label>
+                <textarea name="description" rows="8" cols="80" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="">ผู้แต่ง</label>
+                <input type="text" name="author" value="" class="form-control">
+            </div><br>
+            <input type="submit" value="บันทึก" name="" class="btn btn-primary">
+        </form>
+        <a href="/blog/add">เพิ่มบทความ</a>
+    </div>
+    <script>
+        //  CKEDITOR.replace('ส่วนที่ต้องการตกแต่งด้วย CKEditor' );
+        CKEDITOR.replace('description');
+    </script>
+</body>
+</html>

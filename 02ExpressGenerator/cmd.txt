@@ -1,0 +1,15 @@
+ติดตั้ง Express Generator
+- npm install -g express-generator
+
+สร้าง project
+- express --view=ejs ตามด้วยชื่อโปรเจค
+
+การติดตั้งเพิ่มเติม (*** NodejsBasic คือ ชื่อโปรเจค)
+change directory:
+    > cd NodejsBasic
+
+install dependencies:
+    > npm install
+
+run the app:
+    > SET DEBUG=nodejsbasic:* & npm start
